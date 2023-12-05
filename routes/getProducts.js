@@ -1,8 +1,8 @@
 import express from 'express';
-import { getProducts,getCsv } from '../controllers/getProductcontrollers.js';
+import { getProducts,downloadCsv } from '../controllers/getProductcontrollers.js';
 const getProductInfoRouter = express.Router();
 
-getProductInfoRouter.get('/downloadProducts',getProducts);
-getProductInfoRouter.get('/downloadCsv',getCsv);
+getProductInfoRouter.get('/getProducts/:buyPrice',getProducts);
+getProductInfoRouter.post('/DownloadCsv/:uuid',downloadCsv);
 
 export default getProductInfoRouter;

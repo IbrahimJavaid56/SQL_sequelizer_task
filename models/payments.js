@@ -17,7 +17,9 @@ import { sequelize } from '../config/DBconfig.js'; // Assuming this is the file 
   amount: {
     type: DataTypes.DECIMAL(10, 2),
   },
-}, {
+},{
+  timestamps:false
+} , {
   // Additional model options as needed
   tableName: 'payments', // Set the table name if different from the model name
 });

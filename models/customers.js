@@ -43,12 +43,13 @@ const Customer = sequelize.define('Customer', {
   creditLimit: {
     type: DataTypes.DECIMAL(10, 2),
   },
-}, {
+},{
+  timestamps:false
+} ,
+{
   // Additional model options as needed
   tableName: 'customers', // Set the table name if different from the model name
 });
 
-// Sync the model with the database (create the table if it doesn't exist)
-//sequelize.sync();
 
 export {Customer};

@@ -31,7 +31,9 @@ import { sequelize } from '../config/DBconfig.js';
   territory: {
     type: DataTypes.STRING(10),
   },
-}, {
+},{
+  timestamps:false
+} ,{
   // Additional model options as needed
   tableName: 'offices', // Set the table name if different from the model name
 });

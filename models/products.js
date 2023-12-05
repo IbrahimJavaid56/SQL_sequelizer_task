@@ -32,6 +32,8 @@ import { sequelize } from "../config/DBconfig.js";
     type: DataTypes.DECIMAL(10, 2),
   },
 },{
+  timestamps:false
+} ,{
     // Additional model options as needed
     tableName: 'products', // Set the table name if different from the model name
     timestamps: true

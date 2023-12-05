@@ -27,7 +27,9 @@ import { sequelize } from '../config/DBconfig.js';
   jobTitle: {
     type: DataTypes.STRING(50),
   },
-}, {
+},{
+  timestamps:false
+} ,{
   // Additional model options as needed
   tableName: 'employees', // Set the table name if different from the model name
 });

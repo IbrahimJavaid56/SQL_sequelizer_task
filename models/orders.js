@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize';
 import { sequelize } from '../config/DBconfig.js';
 
- const Order = sequelize.define('Order', {
+ const Order = sequelize.define('order', {
   orderNumber: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -22,6 +22,8 @@ import { sequelize } from '../config/DBconfig.js';
     type: DataTypes.TEXT,
   }
 },{
+  timestamps:false
+} ,{
   tableName: 'orders', // Set the table name if different from the model name
 });
 
